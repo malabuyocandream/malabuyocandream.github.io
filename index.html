@@ -4,222 +4,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlayStation 5 - The Future of Gaming</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Andrea Malabuyoc - Portfolio</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-image: url('https://www.playstationlifestyle.net/wp-content/uploads/sites/9/2023/04/change-ps5-background-theme.jpg?resize=768');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            /* Keeps background fixed during scroll */
-            color: #fff;
             margin: 0;
             padding: 0;
-            min-height: 100vh;
-            overflow-x: hidden;
-            /* Prevent horizontal scroll */
+            background-color: #E8F5E9;
+            /* Light green background */
+            color: #374151;
+            line-height: 1.6;
         }
 
-        .navbar-brand img {
-            height: 40px;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, rgba(26, 26, 26, 0.8), rgba(51, 51, 51, 0.8));
-            min-height: 100vh;
+        header {
+            background-color: #A5D6A7;
+            /* Soft green */
+            padding: 2rem;
             display: flex;
             align-items: center;
             justify-content: center;
+            gap: 2rem;
+            text-align: left;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            flex-wrap: wrap;
+        }
+
+        header img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 3px solid #66BB6A;
+            /* Medium green accent */
+            box-shadow: 0 0 10px rgba(102, 187, 106, 0.5);
+        }
+
+        .header-text {
+            max-width: 500px;
+        }
+
+        h1 {
+            color: #1B5E20;
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            color: #2E7D32;
+            border-bottom: 2px solid #81C784;
+            padding-bottom: 0.5rem;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .about {
+            background-color: #F1F8E9;
+        }
+
+        .contact {
+            background-color: #F1F8E9;
             text-align: center;
         }
 
-        .hero img {
-            max-width: 100%;
-            height: auto;
+        ul {
+            list-style-type: none;
+            padding: 0;
         }
 
-        .section {
-            padding: 5rem 0;
+        li {
+            background: #FAFAFA;
+            margin: 0.5rem 0;
+            padding: 0.75rem;
+            border-radius: 5px;
+            border-left: 4px solid #81C784;
         }
 
-        .feature-card {
-            background: rgba(34, 34, 34, 0.9);
-            border-radius: 10px;
-            padding: 2rem;
-            margin-bottom: 2rem;
+        a {
+            color: #2E7D32;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
         }
 
-        .btn-custom {
-            background-color: #007bff;
-            border: none;
-            padding: 1rem 2rem;
-            font-size: 1.2rem;
+        a:hover {
+            text-decoration: underline;
+            color: #1B5E20;
+            text-shadow: 0 0 8px rgba(102, 187, 106, 0.6);
         }
 
-        .btn-custom:hover {
-            background-color: #0056b3;
-        }
-
-        /* Desktop-specific styles (769px and up) */
-        @media (min-width: 769px) {
-            .hero .row {
-                align-items: center;
-            }
-
-            .hero .col-md-6 {
-                text-align: left;
-                /* Text on left for desktop */
-            }
-        }
-
-        /* Phone-specific styles (768px and down) */
-        @media (max-width: 768px) {
-            .hero {
-                padding: 2rem 0;
-                min-height: auto;
-                /* Allow flexible height on mobile */
-            }
-
-            .hero .row {
+        @media (max-width: 600px) {
+            header {
                 flex-direction: column;
-                /* Stack vertically on phone */
                 text-align: center;
             }
 
-            .hero .col-md-6 {
-                margin-bottom: 2rem;
-                /* Space between stacked elements */
+            h1 {
+                font-size: 2rem;
             }
 
-            .section {
-                padding: 2rem 0;
-            }
-
-            .feature-card {
+            section {
+                margin: 1rem;
                 padding: 1rem;
-            }
-
-            .btn-custom {
-                padding: 0.75rem 1.5rem;
-                font-size: 1rem;
-            }
-
-            .navbar-nav {
-                text-align: center;
             }
         }
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#features">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#games">Games</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Buy Now</a>
-                    </li>
-                </ul>
-            </div>
+    <header>
+        <img src="andeng.jpg" alt="Andrea Malabuyoc">
+        <div class="header-text">
+            <h1>Andrea Malabuyoc</h1>
+            <p><strong>3rd-Year Student</strong></p>
+            <p>Polytechnic University of the Philippines (PUP) Santo Tomas | Building Skills for a Dynamic Future</p>
         </div>
-    </nav>
+    </header>
 
-
-    <section class="hero">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <h1 class="display-4 fw-bold">PlayStation 5</h1>
-                    <p class="lead">Experience the next generation of gaming with lightning-fast loading, stunning
-                        graphics, and immersive gameplay.</p>
-                    <a href="#" class="btn btn-custom">Buy Now</a>
-                </div>
-                <div class="col-md-6">
-                    <img src="https://www.pngmart.com/files/23/Ps5-Logo-PNG-HD.png" alt="PlayStation 5 Console"
-                        class="img-fluid">
-                </div>
-            </div>
-        </div>
+    <section class="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Andrea Malabuyoc, a motivated 3rd-year student at PUP Santo Tomas. I'm passionate about technology
+            and design. I love learning new things and exploring ways to improve myself. I'm hardworking, curious, and
+            always eager to develop my skills. My goal is to gain more experience and grow both personally and
+            professionally in the IT field.</p>
     </section>
 
-
-    <section id="features" class="section">
-        <div class="container">
-            <h2 class="text-center mb-5">Key Features</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="feature-card text-left h-100">
-                        <img src="https://tse4.mm.bing.net/th/id/OIP.tT0CWZfehiwtLzMcpAEx1wHaE8?w=1620&h=1080&rs=1&pid=ImgDetMain&o=7&rm=3"
-                            alt="DualSense Controller" class="img-fluid mb-3">
-                        <h4>DualSense Controller</h4>
-                        <p>Feel every moment with haptic feedback and adaptive triggers for a more immersive experience.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-card text-left h-100">
-                        <img src="https://cdn.mos.cms.futurecdn.net/oCtCTKebeUumJR79NnGphL.jpg" alt="Lightning Fast SSD"
-                            class="img-fluid mb-3">
-                        <h4>Lightning Fast SSD</h4>
-                        <p>Load games in seconds with ultra-high-speed storage and near-instantaneous gameplay.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-card text-left h-100">
-                        <img src="https://cyberpunk2077.video.tm/wp-content/uploads/sites/27/2023/02/Cyberpunk-2077-LOOKS-ABSOLUTELY-INSANE-on-PS5-Ray-Tracing.jpg"
-                            alt="Ray Tracing" class="img-fluid mb-3">
-                        <h4>Ray Tracing</h4>
-                        <p>Enjoy photorealistic graphics with advanced ray tracing technology.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section class="contact">
+        <h2>Contact Information</h2>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:malabuyocandream@gmail.com">malabuyocandream@gmail.com</a></li>
+            <li><strong>Phone:</strong> +63 9517907573</li>
+            <li><strong>Location:</strong> San Pablo, Santo Tomas, Batangas, Philippines</li>
+            <li><strong>Portfolio/GitHub:</strong> <a href="https://github.com/malabuyocandream"
+                    target="_blank">github.com/malabuyocandream</a></li>
+        </ul>
     </section>
-
-
-    <section id="games" class="section bg-dark">
-        <div class="container">
-            <h2 class="text-center mb-5">Exclusive Games</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="https://image.api.playstation.com/vulcan/ap/rnd/202306/1219/1c7b75d8ed9271516546560d219ad0b22ee0a263b4537bd8.png"
-                        alt="Spider-Man 2" class="img-fluid mb-3">
-                    <h4>Marvel's Spider-Man 2</h4>
-                    <p>Swing into action with an epic story and breathtaking visuals.</p>
-                </div>
-                <div class="col-md-6">
-                    <img src="https://image.api.playstation.com/vulcan/ap/rnd/202207/1210/4xJ8XB3bi888QTLZYdl7Oi0s.png"
-                        alt="God of War Ragnarök" class="img-fluid mb-3">
-                    <h4>God of War Ragnarök</h4>
-                    <p>Embark on a mythic journey with Kratos and Atreus.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="text-center py-4">
-        <p>&copy; 2023 Sony Interactive Entertainment. All rights reserved.</p>
-    </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
