@@ -1,0 +1,225 @@
+<!-- activities.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Andrea Malabuyoc - Activities</title>
+
+    <!-- Google Fonts for cursive header -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #f0e8f8;
+            /* pastel lavender background */
+            margin: 0;
+            padding: 2rem;
+            color: #4a4a4a;
+        }
+
+        nav {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        nav a {
+            color: #d47fa6;
+            text-decoration: none;
+            font-weight: 500;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #f6d1d8;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        header h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4rem;
+            color: #d47fa6;
+            margin: 0;
+            text-shadow: 1px 1px 3px #f4c6d4;
+        }
+
+        header p {
+            font-weight: 500;
+            font-size: 1.2rem;
+            color: #8b8b8b;
+            margin-top: 0.5rem;
+        }
+
+        section.activities {
+            max-width: 960px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 12px 28px rgba(212, 127, 166, 0.25);
+            border: 1px solid #f3d4e2;
+        }
+
+        section.activities h2 {
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #d47fa6;
+            font-size: 2rem;
+            border-bottom: 3px solid #f6d1d8;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            position: relative;
+        }
+
+        /* Grid container for cards with 4 columns */
+        ul.activities-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.8rem 2.5rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul.activities-list li {
+            background: #faf4fa;
+            border-radius: 15px;
+            padding: 1.6rem 1.8rem;
+            box-shadow: 4px 4px 15px rgba(212, 127, 166, 0.15);
+            border-left: 7px solid #d47fa6;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            /* Curved left border shape */
+            border-top-left-radius: 1.5rem;
+            border-bottom-left-radius: 1.5rem;
+        }
+
+        /* Icons with pastel pink color */
+        ul.activities-list li i {
+            color: #d47fa6;
+            font-size: 1.8rem;
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* Label: left padded to avoid icon */
+        ul.activities-list li strong {
+            font-weight: 600;
+            color: #a96b8c;
+            margin-left: 3rem;
+            display: block;
+            font-size: 1rem;
+        }
+
+        /* Content text placed with left margin for icon alignment */
+        ul.activities-list li a,
+        ul.activities-list li span {
+            font-weight: 700;
+            margin-left: 3rem;
+            color: #4a4a4a;
+            font-size: 1rem;
+            white-space: normal;
+            word-break: break-word;
+        }
+
+        /* GitHub links should not break awkwardly */
+        ul.activities-list li a[href^="https://github.com"] {
+            white-space: nowrap;
+            overflow-wrap: normal;
+            word-break: keep-all;
+            color: #d47fa6;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        ul.activities-list li a[href^="https://github.com"]:hover {
+            color: #a94f85;
+            text-decoration: underline;
+        }
+
+        /* On hover card lifts and shadow intensifies */
+        ul.activities-list li:hover {
+            box-shadow: 6px 6px 20px rgba(212, 127, 166, 0.35);
+            transform: translateY(-6px);
+            transition: 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+        }
+
+        /* Responsive: single column stacked cards on narrow screen */
+        @media (max-width: 620px) {
+            ul.activities-list {
+                grid-template-columns: 1fr;
+                gap: 1.4rem;
+            }
+
+            ul.activities-list li {
+                flex-direction: row;
+                align-items: center;
+                padding-left: 3.8rem;
+                min-height: 60px;
+            }
+
+            ul.activities-list li strong,
+            ul.activities-list li a,
+            ul.activities-list li span {
+                margin-left: 0;
+                font-size: 1rem;
+            }
+
+            ul.activities-list li i {
+                position: absolute;
+                left: 16px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="activities.html">Activities</a>
+    </nav>
+
+    <header>
+        <h1>Andrea Malabuyoc</h1>
+        <p>3rd-Year Student | Polytechnic University of the Philippines (PUP) Santo Tomas</p>
+    </header>
+
+    <section class="activities">
+        <h2>Activities</h2>
+        <ul class="activities-list">
+            <li>
+                <i class="fab fa-github"></i>
+                <strong>Activity 4:</strong>
+            </li>
+            <li>
+                <i class="fab fa-github"></i>
+                <strong>Activity 5:</strong>
+            </li>
+        </ul>
+    </section>
+</body>
+
+</html>
