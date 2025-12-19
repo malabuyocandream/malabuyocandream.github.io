@@ -1,4 +1,3 @@
-<!-- activities.html -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,18 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Andrea Malabuyoc - Activities</title>
 
-    <!-- Google Fonts for cursive header -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300;400;700&display=swap"
         rel="stylesheet" />
-
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             background: #f0e8f8;
-            /* pastel lavender background */
             margin: 0;
             padding: 2rem;
             color: #4a4a4a;
@@ -67,131 +63,47 @@
             max-width: 960px;
             margin: 0 auto;
             background: #fff;
-            border-radius: 15px;
+            border-radius: 20px;
             padding: 2rem;
             box-shadow: 0 12px 28px rgba(212, 127, 166, 0.25);
+            border: 2px solid #f3d4e2;
+        }
+
+        .card {
             border: 1px solid #f3d4e2;
-        }
-
-        section.activities h2 {
-            text-align: center;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            color: #d47fa6;
-            font-size: 2rem;
-            border-bottom: 3px solid #f6d1d8;
-            display: inline-block;
-            padding-bottom: 0.5rem;
-            position: relative;
-        }
-
-        /* Grid container for cards with 4 columns */
-        ul.activities-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 1.8rem 2.5rem;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        ul.activities-list li {
-            background: #faf4fa;
             border-radius: 15px;
-            padding: 1.6rem 1.8rem;
-            box-shadow: 4px 4px 15px rgba(212, 127, 166, 0.15);
-            border-left: 7px solid #d47fa6;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            gap: 0.4rem;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            /* Curved left border shape */
-            border-top-left-radius: 1.5rem;
-            border-bottom-left-radius: 1.5rem;
+            box-shadow: 0 6px 15px rgba(212, 127, 166, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        /* Icons with pastel pink color */
-        ul.activities-list li i {
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(212, 127, 166, 0.25);
+        }
+
+        .card-title {
             color: #d47fa6;
-            font-size: 1.8rem;
-            position: absolute;
-            left: 18px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        /* Label: left padded to avoid icon */
-        ul.activities-list li strong {
             font-weight: 600;
-            color: #a96b8c;
-            margin-left: 3rem;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: #d47fa6;
+            border: none;
+            transition: background-color 0.3s ease;
             display: block;
-            font-size: 1rem;
+            margin: 0 auto;
         }
 
-        /* Content text placed with left margin for icon alignment */
-        ul.activities-list li a,
-        ul.activities-list li span {
-            font-weight: 700;
-            margin-left: 3rem;
-            color: #4a4a4a;
-            font-size: 1rem;
-            white-space: normal;
-            word-break: break-word;
+        .btn-primary:hover {
+            background-color: #e78bb5;
         }
 
-        /* GitHub links should not break awkwardly */
-        ul.activities-list li a[href^="https://github.com"] {
-            white-space: nowrap;
-            overflow-wrap: normal;
-            word-break: keep-all;
-            color: #d47fa6;
-            text-decoration: none;
-            transition: color 0.3s ease;
-            cursor: pointer;
-        }
-
-        ul.activities-list li a[href^="https://github.com"]:hover {
-            color: #a94f85;
-            text-decoration: underline;
-        }
-
-        /* On hover card lifts and shadow intensifies */
-        ul.activities-list li:hover {
-            box-shadow: 6px 6px 20px rgba(212, 127, 166, 0.35);
-            transform: translateY(-6px);
-            transition: 0.3s cubic-bezier(0.7, 0, 0.3, 1);
-        }
-
-        /* Responsive: single column stacked cards on narrow screen */
-        @media (max-width: 620px) {
-            ul.activities-list {
-                grid-template-columns: 1fr;
-                gap: 1.4rem;
-            }
-
-            ul.activities-list li {
-                flex-direction: row;
-                align-items: center;
-                padding-left: 3.8rem;
-                min-height: 60px;
-            }
-
-            ul.activities-list li strong,
-            ul.activities-list li a,
-            ul.activities-list li span {
-                margin-left: 0;
-                font-size: 1rem;
-            }
-
-            ul.activities-list li i {
-                position: absolute;
-                left: 16px;
-                top: 50%;
-                transform: translateY(-50%);
-            }
+        .card-img-top {
+            height: 180px;
+            object-fit: cover;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
         }
     </style>
 </head>
@@ -208,18 +120,54 @@
     </header>
 
     <section class="activities">
-        <h2>Activities</h2>
-        <ul class="activities-list">
-            <li>
-                <i class="fab fa-github"></i>
-                <strong>Activity 4:</strong>
-            </li>
-            <li>
-                <i class="fab fa-github"></i>
-                <strong>Activity 5:</strong>
-            </li>
-        </ul>
+        <h2 class="mb-4 text-center" style="color:#d47fa6;">Activities</h2>
+
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-md-5 col-sm-12">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Activity 4: PlayStation PS5</h5>
+                        <a href="https://malabuyocandream.github.io/playstation-ps5/" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-primary">View Activity</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-5 col-sm-12">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Activity 5: New York Showcase</h5>
+                        <a href="https://malabuyocandream.github.io/New-York-Showcase/" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-primary">View Activity</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-5 col-sm-12">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Gallery Project: My Future Goals</h5>
+                        <a href="https://malabuyocandream.github.io/My-Goal-Gallery/" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-primary">View Activity</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-5 col-sm-12">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Activity 7: Rick and Morty API</h5>
+                        <a href="https://malabuyocandream.github.io/Rick-and-Morty--API/" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-primary">View Activity</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
