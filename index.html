@@ -5,20 +5,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Andrea Malabuyoc | Pastel Portfolio</title>
+    <title>Andrea Malabuyoc | My Portfolio</title>
 
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300;400;700&display=swap"
         rel="stylesheet">
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #f0e8f8;
+            color: #4a4a4a;
+        }
+
+        nav {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #d47fa6;
+            font-weight: 500;
+            padding: 7px 15px;
+            margin: 0 8px;
+            border-radius: 10px;
+            transition: .3s;
+        }
+
+        nav a:hover {
+            background: #f6d1d8;
+        }
+
+        header h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.8rem;
+            color: #d47fa6;
+            text-shadow: 1px 1px 3px #f4c6d4;
+        }
+
+        header p {
+            color: #8b8b8b;
+            font-size: 1.1rem;
+        }
+
+        .contact-card {
+            background: #faf4fa;
+            border-left: 6px solid #d47fa6;
+            padding: 18px;
+            border-radius: 15px;
+            box-shadow: 4px 4px 15px rgba(212, 127, 166, .18);
+            position: relative;
+            transition: .3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 5px 5px 20px rgba(212, 127, 166, .35);
+        }
+
+        .contact-card i {
+            font-size: 1.7rem;
+            color: #d47fa6;
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .contact-card strong,
+        .contact-card span,
+        .contact-card a {
+            margin-left: 45px;
+            display: block;
+            color: #4a4a4a;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .contact-card a {
+            color: #d47fa6;
+            text-decoration: none;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+            color: #a64d82;
+        }
+
+        @media(max-width:768px) {
+            .contact-card {
+                padding-left: 60px;
+            }
+
+            nav a {
+                margin: 5px;
+                display: inline-block;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -34,6 +122,7 @@
     </header>
 
     <section class="container" style="max-width:1000px;">
+
         <h2 class="text-center mb-4" style="color:#d47fa6; font-weight:bold;">
             Contact Information
         </h2>
@@ -73,7 +162,7 @@
         </div>
     </section>
 
-    <!-- Bootstrap JS -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
